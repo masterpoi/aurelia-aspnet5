@@ -1,0 +1,9 @@
+{
+    "name": "aurelia_aspnet5",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "^3.3.4",
+        "requirejs": "^2.1.17",
+        "font-awesome": "^4.3.0"
+    }
+}

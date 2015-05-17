@@ -3,12 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />        
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />   
+    <link href="assets/all.css" rel="stylesheet" />
 </head>
-<body>
-    <div id="output">Testing</div>
+<body aurelia-app="app/main-aurelia" es5>
+    <div class="splash">
+        <div class="message">The application is loading, welcome</div>
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
 
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
-    <script>System.import("app/main");</script>
+    <script src="libs/requirejs/require.js" data-main="app/main"></script>
 </body>
 </html>

@@ -1,22 +1,19 @@
 {
-    "jspm": {
-        "directories": {
-            "baseURL": "wwwroot"
-        },
-        "devDependencies": {
-            "babel": "npm:babel-core@^5.0.12",
-            "babel-runtime": "npm:babel-runtime@^5.0.12",
-            "core-js": "npm:core-js@^0.8.1"
-        }
+    
+    "dependencies": {   
     },
-    "devDependencies": {
-        "tsd": "^0.6.0",
-        "gulp-tsd": "~0.0.4",
-        "gulp": "^3.8.11",
-        "gulp-typescript" : "^2.7.4",
-        "merge2": "^0.3.5",
-
-        "typescript": "Microsoft/TypeScript",
-         "run-sequence": "^1.0.2"
-    }
+  "devDependencies": {
+    "tsd": "^0.6.0",
+    "gulp-tsd": "~0.0.4",
+    "gulp": "^3.8.11",
+    "gulp-bower": "^0.0.10",
+    "gulp-typescript": "^2.7.4",
+    "gulp-filter": "^2.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-concat" : "^2.5.2",
+    "merge2": "^0.3.5",
+    "typescript": "Microsoft/TypeScript",
+    "run-sequence": "^1.0.2"
+    
+  }
 }

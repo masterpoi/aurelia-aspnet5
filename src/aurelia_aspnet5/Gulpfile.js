@@ -1,13 +1,33 @@
-﻿/// <binding BeforeBuild='build-ts' Clean='tsd' />
-/*
-This file in the main entry point for defining Gulp tasks and using Gulp plugins.
-Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
-*/
+﻿/// <binding AfterBuild='build' Clean='tsd' />
 
+ 
 var gulp = require('gulp');
 var tsd = require('gulp-tsd');
 var ts = require('gulp-typescript');
 var merge = require('merge2');
+var bower = require('gulp-bower');
+var concat = require('gulp-concat');
+
+var assetsRoot = "wwwroot/assets/";
+
+
+gulp.task('bower', function () {
+    return bower()
+      .pipe(gulp.dest('wwwroot/libs/'))
+});
+
+gulp.task('custlibs', function() {
+    return gulp.src("customlibs/**/*.*")
+        .pipe(gulp.dest('wwwroot/libs'));
+});
+
+gulp.task('css', function() {
+    return gulp.src(assetsRoot + 'css/**/*.css')
+        .pipe(concat('all.css'))
+        .pipe(gulp.dest(assetsRoot));
+});
+gulp.task('build', ['bower', 'css', 'build-ts', 'custlibs']);
+
 
 gulp.task('build-ts', function () {
     var tsResult = gulp.src([
